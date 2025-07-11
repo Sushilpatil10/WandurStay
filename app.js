@@ -62,17 +62,18 @@ main()
     console.log("Error in Mongo Session Store" ,err);
   });
 
-    const sessionOptions={
-    secret :process.env.SECRET,
-    resave:false,
-    saveUninitialized: true ,
-    cookie:{
-       expires: Date.now()+7*24*60*60*1000,
-       maxAge:7*24*60*60*1000,
-       httpOnly:true,
-    },
+   const sessionOptions = {
+  store: store, 
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitialized: true,
+  cookie: {
+    expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
+    maxAge: 7 * 24 * 60 * 60 * 1000,
+    httpOnly: true,
+  },
+};
 
-  };
 
 
   
@@ -110,6 +111,9 @@ app.use("/",userRouter);
 
 // });
 
+app.get("/", (req, res) => {
+  res.redirect("/listings"); 
+});
 
 
 
