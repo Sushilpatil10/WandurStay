@@ -1,0 +1,307 @@
+/* ==========================
+   Updated Show Page - style.css
+   ========================== */
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+/* Navbar */
+.navbar {
+  height: 5rem;
+  background-color: white;
+}
+
+.fa-compass {
+  color: #fe424d;
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: #222222 !important;
+}
+
+/* Footer */
+.f-info {
+  text-align: center;
+  height: 8rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-info-socials i {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info-socials {
+  text-decoration: none;
+  color: #222222;
+}
+
+/* Listing Card */
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  height: 20rem;
+}
+
+.card-body {
+  padding: 1rem !important;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Show Page Specific */
+.show-card {
+  max-width: 720px;
+  margin: auto;
+  border: none !important;
+  
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: white;
+  margin-bottom: 3rem;
+}
+
+.show-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+  display: block;
+}
+
+/* Edit/Delete Buttons */
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.edit-btn,
+.add-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+  color: white;
+}
+
+/* Reviews */
+.review-card {
+  border: 1px solid #ddd;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-3px);
+}
+
+.review-card .card-body {
+  padding: 1rem;
+}
+
+.review-card .card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.review-card .card-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.review-card form button {
+  background-color: #222;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  border: none;
+  
+}
+
+.review-card form button:hover {
+  background-color: #444;
+}
+
+/* Form Section */
+form.needs-validation {
+  margin-top: 1rem;
+}
+
+.starability-slot {
+  margin: 0.5rem 0;
+}
+
+/* Image Preview (Edit Page) */
+.img-preview {
+  max-width: 100%;
+  width: 100px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 576px) {
+  .show-card {
+    margin: 0 1rem;
+  }
+
+  .card-body {
+    padding: 1rem !important;
+  }
+
+  .btns {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .review-card .card-title {
+    font-size: 0.95rem;
+  }
+
+  .review-card .card-text {
+    font-size: 0.85rem;
+  }
+}
+
+/* Listings Grid Columns */
+.row-cols-1 > * {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 576px) {
+  .row-cols-sm-1 > * {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .row-cols-md-2 > * {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .row-cols-lg-3 > * {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+/* Tablet & Small screen refinement */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: transparent;  /* Match page background */
+    padding: 0.5rem 0;
+    box-shadow: none;               /* Remove “floating panel” feel */
+    border-radius: 0;               /* Remove round corners */
+  }
+
+  form[role="search"] {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .search-inp,
+  .btn-search {
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+  }
+
+  .btn-search {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .navbar-nav .nav-link:first-child {
+    margin-top: 0 !important;
+    padding-top: 0.25rem;
+  }
+
+  .navbar-nav .nav-link {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    margin: 0;
+  }
+}
+
+
+/* ✅ Small screens - stacked full width */
+@media (max-width: 575px) {
+  .search-inp {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
+/* ✅ Medium screens - neat and compact */
+@media (min-width: 576px) and (max-width: 991px) {
+  .search-inp {
+    width: 250px;
+    max-width: 250px;
+  }
+}
+
+/* ✅ Large screens - slightly wider */
+@media (min-width: 992px) {
+  .search-inp {
+    width: 300px;
+    max-width: 300px;
+  }
+}
