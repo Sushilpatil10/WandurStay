@@ -33,7 +33,6 @@ It provides a modern and interactive UI for guests and hosts to connect, browse 
 
 ## 🖼️ Project Screenshots
 
-> Place all screenshots inside a folder named `/assets/images/` in your project.
 
 ### 🧭 Dashboard  
 ![Dashboard](images/Dashboard.png)
