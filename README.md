@@ -31,8 +31,6 @@ It provides a modern and interactive UI for guests and hosts to connect, browse 
 ## 🖼️ Project Screenshots
 
 
-## 🖼️ Project Screenshots
-
 
 ### 🧭 Dashboard  
 ![Dashboard](images/Dashboard.png)
